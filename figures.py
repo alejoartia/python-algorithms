@@ -1,3 +1,5 @@
+"""This is a little bit library to plot figures in shapely"""
+
 from math import sqrt
 from shapely import affinity
 
