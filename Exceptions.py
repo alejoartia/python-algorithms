@@ -1,5 +1,5 @@
 """This is an example about hot to handle exeptions with python"""
-def divide_element_list(list_a, divisor):
+def divide_list_elements(list_a, divisor):
     try:
         return [i / divisor for i in list_a]
     except ZeroDivisionError as e:
@@ -10,7 +10,7 @@ def divide_element_list(list_a, divisor):
 list_a = list(range(10))
 divisor = 0
 
-print(divide_element_list(list_a, divisor))
+print(divide_list_elements(list_a, divisor))
 
 
 

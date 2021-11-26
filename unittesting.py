@@ -2,27 +2,27 @@
 import unittest
 
 
-def suma(num_1, num_2):
+def sum(num_1, num_2):
     return abs(num_1) + num_2
 
 
-class CajaNegraTest(unittest.TestCase):
+class BlackBoxTest(unittest.TestCase):
 
-    def test_suma_dos_positivos(self):
+    def test_sum_two_positives(self):
         num_1 = 10
         num_2 = 5
 
-        resultado = suma(num_1, num_2)
+        resultado = sum(num_1, num_2)
 
         self.assertEqual(resultado, 15)
 
-    def test_suma_dos_negativos(self):
+    def test_sum_two_negatives(self):
         num_1 = -10
         num_2 = -7
 
-        resultado = suma(num_1, num_2)
+        result = sum(num_1, num_2)
 
-        self.assertEqual(resultado, -17)
+        self.assertEqual(result, -17)
 
 
 if __name__ == '__main__':

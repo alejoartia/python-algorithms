@@ -2,29 +2,29 @@
 
 import random
 
-def busqueda_binaria(lista, comienzo, final, objetivo):
-    print(f'buscando {objetivo} entre {lista[comienzo]} y  {lista[final-1]}')
-    if comienzo > final:
+def binary_search(list_a, start, end, goal):
+    print(f'searching {goal} beetwen {list_a[start]} and  {list_a[end-1]}')
+    if start > end:
         return False
 
-    medio = (comienzo + final) // 2
+    half = (start + end) // 2
 
-    if lista[medio] == objetivo:
+    if list_a[half] == goal:
         return True
-    elif lista[medio] < objetivo:
-        return busqueda_binaria(
+    elif list_a[half] < goal:
+        return binary_search(
 
-            lista, medio+1, final, objetivo)
+            list_a, half+1, end, goal)
     else:
-        return busqueda_binaria(lista, comienzo, medio-1, objetivo)
+        return binary_search(list_a, start, half-1, goal)
 
 if __name__ == '__main__':
-    tamano_de_lista = int(input('De que tamano es la lista?'))
-    objetivo = int(input('Que numero quieres encontrar?'))
+    tamano_de_list_a = int(input('what is the list size?'))
+    goal = int(input('what number you whant to find?'))
 
-    lista = sorted([random.randint(0, 100) for i in range(tamano_de_lista)])
+    list_a = sorted([random.randint(0, 100) for i in range(tamano_de_list_a)])
 
-    encontrado = busqueda_binaria(lista, 0, len(lista), objetivo)
+    finded = binary_search(list_a, 0, len(list_a), goal)
 
-    print(lista)
-    print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"} en la lista')
+    print(list_a)
+    print(f'The element {goal} {"is" if finded else "is not"} in the list')

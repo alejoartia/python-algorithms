@@ -3,13 +3,13 @@
 import time
 
 def factorial(n):
-    respuesta = 1
+    response = 1
 
     while n > 1:
-        respuesta *= n
+        response *= n
         n -= 1
 
-    return respuesta
+    return response
 
 
 def factorial_r(n):
@@ -22,12 +22,12 @@ def factorial_r(n):
 if __name__ == '__main__':
     n = 200000
 
-    comienzo = time.time()
+    start = time.time()
     factorial(n)
-    final = time.time()
-    print(final - comienzo)
+    end = time.time()
+    print(end - start)
 
-    comienzo = time.time()
+    start = time.time()
     factorial_r(n)
-    final = time.time()
-    print(final - comienzo)
+    end = time.time()
+    print(end - start)

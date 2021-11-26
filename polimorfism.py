@@ -1,28 +1,28 @@
 """This is an example about how to do polimorfism"""
-class Persona:
+class Person:
 
-    def __init__(self, nombre):
-        self.nombre = nombre
-
-    def avanza(self):
-        print('Ando caminando')
-
-
-class Ciclista(Persona):
-
-    def __init__(self, nombre):
-        super().__init__(nombre)
+    def __init__(self, name):
+        self.name = name
 
     def avanza(self):
-        print('Ando moviendome en mi bicicleta')
+        print('walking')
+
+
+class Biker(Person):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+    def avanza(self):
+        print('riding by bycicle')
 
 
 def main():
-    persona = Persona('David')
-    persona.avanza()
+    person = Person('David')
+    person.avanza()
 
-    ciclista = Ciclista('Daniel')
-    ciclista.avanza()
+    biker = Biker('Daniel')
+    biker.avanza()
 
 
 if __name__ == '__main__':

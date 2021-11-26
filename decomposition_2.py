@@ -1,28 +1,28 @@
 """This is an example about how to do decomposition"""
-class Automovil:
+class Automobil:
 
-    def __init__(self, modelo, marca, color):
-        self.modelo = modelo
-        self.marca = marca
+    def __init__(self, model, brand, color):
+        self.model = model
+        self.brand = brand
         self.color = color
-        self._estado = 'en_reposo'
-        self._motor = Motor(cilindros=4)
+        self._state = 'staying'
+        self._motor = Motor(cylinders=4)
 
-    def acelerar(self, tipo='despacio'):
-        if tipo == 'rapida':
-            self._motor.inyecta_gasolina(10)
+    def speed_up(self, type='slow'):
+        if type == 'fast':
+            self._motor.gas_injection(10)
         else:
-            self._motor.inyecta_gasolina(3)
+            self._motor.gas_injection(3)
 
-        self._estado = 'en_movimiento'
+        self._state = 'in_movement'
 
 
 class Motor:
 
-    def __init__(self, cilindros, tipo='gasolina'):
-        self.cilindros = cilindros
-        self.tipo = tipo
-        self._temperatura = 0
+    def __init__(self, cylinders, type='gas'):
+        self.cylinders = cylinders
+        self.type = type
+        self._temperature = 0
 
-    def inyecta_gasolina(self, cantidad):
+    def gas_injection(self, quantity):
         pass

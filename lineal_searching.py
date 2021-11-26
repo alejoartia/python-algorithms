@@ -2,22 +2,22 @@
 
 import random
 
-def busqueda_lineal(lista, objetivo):
+def lineal_search(list_a, goal):
     match = False
 
-    for elemento in lista:
-        if elemento == objetivo:
+    for element in list_a:
+        if element == goal:
             match = True
             break
 
     return match
 
 if __name__ == '__main__':
-    tamano_de_lista = int(input('De que tamano sera la lista?'))
-    objetivo = int(input('Que numero quieres encontrar'))
+    size_list = int(input('whats is the size list_a?'))
+    goal = int(input('waht number you want to find'))
 
-    lista = [random.randint(0, 100)for i in range(tamano_de_lista)]
+    list_a = [random.randint(0, 100)for i in range(size_list)]
 
-    encontrado = busqueda_lineal(lista, objetivo)
-    print(lista)
-    print(f'El elemento {objetivo} {"esta" if encontrado else "no esta"} en la lista')
+    finded = lineal_search(list_a, goal)
+    print(list_a)
+    print(f'El element {goal} {"is" if finded else "is nor"} in the list')
