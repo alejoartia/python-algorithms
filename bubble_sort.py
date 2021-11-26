@@ -2,23 +2,23 @@
 
 import random
 
-def ordenamiento_de_burbuja(lista):
-    n = len(lista)
+def bubble_sort(list_a):
+    n = len(list_a)
 
     for i in range(n):
         for j in range(0, n - i - 1): # O(n) * O(n) = O(n * n) = O(n**2)
 
-            if lista[j] > lista[j + 1]:
-                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+            if list_a[j] > list_a[j + 1]:
+                list_a[j], list_a[j + 1] = list_a[j + 1], list_a[j]
 
-    return lista
+    return list_a
     numbers.sort()
     return numbers[0]+numbers[1]
 if __name__ == '__main__':
-    tamano_de_lista = int(input('De que tamano sera la lista? '))
+    size_of_list = int(input('list size? '))
 
-    lista = [random.randint(0, 100) for i in range(tamano_de_lista)]   # crea una lista random
-    print(lista)
+    list_a = [random.randint(0, 100) for i in range(size_of_list)]   # create a random list
+    print(list_a)
 
-    lista_ordenada = ordenamiento_de_burbuja(lista)
-    print(lista_ordenada)
+    list_a_sort = bubble_sort(list_a)
+    print(list_a_sort)

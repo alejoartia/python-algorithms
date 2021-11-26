@@ -1,22 +1,22 @@
 """This is a resolution of the bag problem (problema del morral)"""
 
-def morral(tamano_morral, pesos, valores, n):
+def bagpack(size_bag, weigth, values, n):
 
-    if n == 0 or tamano_morral == 0:
+    if n == 0 or size_bag == 0:
         return 0
 
-    if pesos[n - 1] > tamano_morral:
-        return morral(tamano_morral, pesos, valores, n - 1)
+    if weigth[n - 1] > size_bag:
+        return bagpack(size_bag, weigth, values, n - 1)
 
-    return max(valores[n - 1] + morral(tamano_morral - pesos[n - 1], pesos, valores, n - 1),
-                morral(tamano_morral, pesos, valores, n - 1))
+    return max(values[n - 1] + bagpack(size_bag - weigth[n - 1], weigth, values, n - 1),
+                bagpack(size_bag, weigth, values, n - 1))
 
 
 if __name__ == '__main__':
-    valores = [60, 100, 120]
-    pesos = [10, 20, 30]
-    tamano_morral = 5
-    n = len(valores)
+    values = [60, 100, 120]
+    weigth = [10, 20, 30]
+    size_bag = 5
+    n = len(values)
 
-    resultado = morral(tamano_morral, pesos, valores, n)
-    print(resultado)
+    result = bagpack(size_bag, weigth, values, n)
+    print(result)

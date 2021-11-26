@@ -1,18 +1,18 @@
 """example of binary search"""
 
-objetivo = int(input('Escoge un numero: '))
+goal = int(input('choise a number: '))
 epsilon = 0.001
-bajo = 0.0
-alto = max(1.0, objetivo)
-respuesta = (alto + bajo) / 2
+low = 0.0
+high = max(1.0, goal)
+respuesta = (high + low) / 2
 
-while abs(respuesta**2 - objetivo) >= epsilon:
-    print(f'bajo={bajo}, alto={alto}, respuesta={respuesta}')
-    if respuesta**2 < objetivo:
-        bajo = respuesta
+while abs(response**2 - goal) >= epsilon:
+    print(f'low={low}, high={high}, response={response}')
+    if response**2 < goal:
+        low = response
     else:
-        alto = respuesta
+        high = response
 
-    respuesta = (alto + bajo) / 2
+    response = (high + low) / 2
 
-print(f'La raiz cuadrada de {objetivo} es {respuesta}')
+print(f'the sqrt of  {goal} is {response}')

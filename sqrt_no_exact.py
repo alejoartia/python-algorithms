@@ -1,15 +1,15 @@
 # RAIZ CUADRADA NO EXACTA
 """This is an example about how to get a not exact sqrt"""
-objetivo = int(input('Escoge un numero: '))
+goal = int(input('choise a number: '))
 epsilon = 0.001
-paso = epsilon**2
-respuesta = 0.0
+step = epsilon**2
+response = 0.0
 
-while abs(respuesta**2 - objetivo) >= epsilon and respuesta <= objetivo:
-    print(abs(respuesta**2 - objetivo), respuesta)
-    respuesta += paso
+while abs(response**2 - goal) >= epsilon and response <= goal:
+    print(abs(response**2 - goal), response)
+    response += step
 
-if abs(respuesta**2 - objetivo) >= epsilon:
-    print(f'No se encontro la raiz cuadrada {objetivo}')
+if abs(response**2 - goal) >= epsilon:
+    print(f'doesnt fin sqrt {goal}')
 else:
-    print(f'La raiz cudrada de {objetivo} es  aproximadamente {respuesta}')
+    print(f'the sqrt of {goal} is aproximaly {response}')
